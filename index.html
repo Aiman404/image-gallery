@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="glass">
+  <h1>Image Gallery</h1>
+  <p>Filter by category, switch views, click any image to open it.</p>
+</header>
+
+<div class="bar" id="bar"></div>
+
+<main class="grid" id="grid">
+
+  <!-- =====================================================
+       ADD YOUR PICTURES HERE
+       1. Put your photo files inside the "images" folder
+       2. Copy ONE block below, paste it, and change 3 things:
+            src        -> images/your-file-name.jpg
+            data-cat   -> category name (e.g. Nature, Family, Travel)
+            data-title -> title shown on hover / lightbox
+       3. Delete the sample blocks you don't need.
+       (If a file is missing, a sample picture is shown instead.)
+       ===================================================== -->
+
+  <figure class="item" data-cat="Nature"   data-title="Mountain"><img src="assets/images/mountain.jpg" alt="Photo 1"></figure>
+  <figure class="item" data-cat="City"     data-title="Babe Khyber"><img src="assets/images/babe khybar.jpg" alt="Photo 2"></figure>
+  <figure class="item" data-cat="Ocean"    data-title="Beach View"><img src="assets/images/ocean.jpg" alt="Photo 3"></figure>
+  <figure class="item" data-cat="Abstract" data-title="Asthetic"><img src="assets/images/abstract.jpg" alt="Photo 4"></figure>
+  <figure class="item" data-cat="Nature"   data-title="Sakura"><img src="assets/images/flower.jpg" alt="Photo 5"></figure>
+  <figure class="item" data-cat="City"     data-title="Tokyo"><img src="assets/images/tokyo.png" alt="Photo 6"></figure>
+  <figure class="item" data-cat="Ocean"    data-title="Beautiful Ocean"><img src="assets/images/Ocean1.jpg" alt="Photo 7"></figure>
+  <figure class="item" data-cat="Animal"  data-title="Kitty"><img src="assets/images/cat.jpg" alt="Photo 8"></figure>
+  <figure class="item" data-cat="Nature" data-title="Cherry Blossom"><img src="assets/images/sakura.jpg" alt="Photo 8"></figure>
+  <figure class="item" data-cat="City" data-title="Japan"><img src="assets/images/japan.jpg" alt="Photo 8"></figure>
+  <figure class="item" data-cat="Abstract" data-title="Momentify art"><img src="assets/images/the art.png" alt="Photo 8"></figure>
+  <figure class="item" data-cat="Animal" data-title="Puppy"><img src="assets/images/dog.jpg" alt="Photo 8"></figure>
+  <!-- ============ END OF YOUR PICTURES ============ -->
+
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="play" id="play" title="Slideshow" aria-label="Toggle slideshow">▶</button>
+  <button class="close" id="close" aria-label="Close">✕</button>
+  <button class="prev" id="prev" aria-label="Previous">‹</button>
+  <img id="lbImg" alt="">
+  <button class="next" id="next" aria-label="Next">›</button>
+  <div class="info glass"><b id="lbTitle"></b><br><small id="lbMeta"></small></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
